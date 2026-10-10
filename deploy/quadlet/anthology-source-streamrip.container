@@ -1,0 +1,18 @@
+# anthology-source-streamrip – GPL-3.0-only (streamrip) – OPTIONAL
+# Install only if you want the sources it provides. Delete this file to disable it.
+[Unit]
+Description=Anthology source service anthology-source-streamrip (optional)
+
+[Container]
+ContainerName=anthology-source-streamrip
+Pod=anthology.pod
+Environment=ANTHOLOGY_SOURCE_PORT=8420
+Image=ghcr.io/anthology-sources/anthology-source-streamrip:latest
+Volume=anthology-imports.volume:/data/imports:U
+Volume=anthology-source-streamrip-state.volume:/data/state:U
+
+[Service]
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

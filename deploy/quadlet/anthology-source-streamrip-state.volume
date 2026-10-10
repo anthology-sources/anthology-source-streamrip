@@ -1,0 +1,3 @@
+# State of anthology-source-streamrip (login session, task state). No credentials in plain text.
+[Volume]
+VolumeName=anthology-source-streamrip-state

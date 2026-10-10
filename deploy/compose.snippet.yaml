@@ -1,0 +1,15 @@
+# Merge into Anthology's deploy/compose.yaml and add the URL to
+# ANTHOLOGY_SOURCE_SERVICES of anthology-server.
+# Status: placeholder – the image does not exist yet.
+
+services:
+  anthology-source-streamrip:                  # GPL-3.0-only (streamrip) – optional
+    image: ghcr.io/anthology-sources/anthology-source-streamrip:latest
+    environment:
+      ANTHOLOGY_SOURCE_PORT: "8420"
+    volumes:
+      - imports:/data/imports
+      - anthology-source-streamrip-state:/data/state
+
+volumes:
+  anthology-source-streamrip-state:

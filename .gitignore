@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local data and media (never commit downloaded content)
+/data/
+*.flac
+*.wav
+*.mp3
+*.m4a
+*.opus
+*.webm
+*.mkv
+*.mp4
+
+# Local agent settings and private notes
+.claude/settings.local.json
+*.local.md
